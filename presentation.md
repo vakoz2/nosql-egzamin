@@ -885,4 +885,8 @@ Nie łatwo jest zastąpić legendę.
 | Agregacja nr 5 | 730 ms       | 1757 ms      | 12108 ms      |
 | Agregacja nr 6 | 973 ms       | 1835 ms      | 1347 ms       |
 
+---
 
+# Skrypt w Python
+
+[Przykład](https://github.com/mkielb/nosql-egzamin)
