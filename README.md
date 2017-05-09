@@ -9,6 +9,7 @@
 Kolekcja *events*:
 
 Ilość dokumentów: **941,009**
+
 Przykładowy dokument:
 
 ```json
@@ -42,6 +43,7 @@ Przykładowy dokument:
 Kolekcja *ginf*:
 
 Ilość dokumentów: **10,112**
+
 Przykładowy dokument:
 
 ```json
