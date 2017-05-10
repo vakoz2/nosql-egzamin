@@ -882,7 +882,7 @@ Nie łatwo jest zastąpić legendę.
 | Agregacja nr 2 | 377 ms       | 1113 ms      | 801 ms        |
 | Agregacja nr 3 | 662 ms       | 1232 ms      | 953 ms        |
 | Agregacja nr 4 | 944 ms       | 1334 ms      | 1147 ms       |
-| Agregacja nr 5 | 730 ms       | 1757 ms      | 12108 ms      |
+| Agregacja nr 5 | 730 ms       | 1757 ms      | 1218 ms      |
 | Agregacja nr 6 | 973 ms       | 1835 ms      | 1347 ms       |
 
 ---
