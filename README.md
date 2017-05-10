@@ -82,3 +82,46 @@ Przykładowy dokument:
 ### Prezentacja
 
 [Link do prezentacji](https://github.com/mkielb/nosql-egzamin/blob/master/presentation.pdf)
+
+#### Zapytania do mongo z użyciem Pythona.
+Aby móc korzystać w Pythonie z dostępu do do bazy w mongo należy zainstalować pakiet <b>PyMongo</b>. Następnie korzystamy ze szkieletu:
+```
+import pymongo
+client = pymongo.MongoClient()
+db = client.test
+```
+gdzie <i>test</i> to nazwa bazy. Następnie kopiujemy nasze zapytanie dodając apostrofy do stringów. Dla pierwszej agregacji wygląda to tak:
+```
+aggr = db.events.aggregate( [
+	{
+	'$facet': {
+		'categorizedByGoal': [
+			{ '$match': { 'is_goal': { '$eq': 1 } } },
+			{
+				'$bucket': {
+					'groupBy': '$time',
+      					'boundaries': [ 0, 46, 91, 120 ],
+      					'default': 'Other',
+      					'output': {
+        					'count': { '$sum': 1 },
+      					}
+    				}
+  			}
+		],
+	}
+	}
+]
+)
+for x in aggr:
+	print (x)
+```
+Porównanie otrzymanych wyników:
+mongo:
+```
+
+```
+python:
+```
+C:\Users\vakoz\nosql>python script.py
+{'categorizedByGoal': [{'_id': 0, 'count': 10744}, {'_id': 46, 'count': 13433}, {'_id': 91, 'count': 269}]}
+```
